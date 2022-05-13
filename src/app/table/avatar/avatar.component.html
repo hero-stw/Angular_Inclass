@@ -1,0 +1,16 @@
+<p>
+  <img
+    *ngIf="age > 30"
+    class="border border-warning mw-100 mh-100 border-3"
+    src="{{ src }}"
+    height="100"
+    alt=""
+  />
+  <img
+    *ngIf="age <= 30"
+    class="border border-primary mw-100 mh-100 border-3"
+    src="{{ src }}"
+    height="100"
+    alt=""
+  />
+</p>

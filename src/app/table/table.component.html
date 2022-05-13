@@ -1,0 +1,33 @@
+<div class="content container" role="main">
+  <!-- Table -->
+  <div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Avatar</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of teachers">
+          <td>{{ item.id }}</td>
+          <td><app-table-name [title]="item.name"></app-table-name></td>
+          <td>{{ item.age }}</td>
+          <td>
+            <app-table-gender [gen]="item.gender"></app-table-gender>
+          </td>
+          <td>
+            <app-avatar [age]="item.age" [source]="item.avatar"></app-avatar>
+          </td>
+          <td>
+            <app-status [state]="item.status"></app-status>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
